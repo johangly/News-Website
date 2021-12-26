@@ -1,0 +1,139 @@
+* {
+    /* outline: 1px solid rgba(255, 109, 109, 0.192); */
+}
+
+
+/* Footer  */
+
+.footer * {
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.footer {
+    display: grid;
+    /* align-items: center; */
+    grid-template-columns: 1fr;
+    /* justify-content: space-between; */
+    background: var(--color-5);
+    min-height: 173px;
+}
+
+.footer__content {
+    align-items: center;
+    padding: 0 42px;
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+/* footer logos  */
+
+.footer__content .footer__logos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer__content .footer__logos img {
+    margin: 5px 0;
+    width: 90px;
+}
+
+
+/* footer social */
+
+.footer__content .footer__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__content .footer__social a img {
+    width: 25px;
+    margin: 8px 0;
+}
+
+
+/* footer about */
+
+.footer__content .footer__about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__about * {
+    margin: 12px 0;
+}
+
+.footer__about a,
+.footer__legal a {
+    font-size: 13px;
+}
+
+.footer__about h4,
+.footer__legal h4 {
+    font-size: 24px;
+    font-weight: normal;
+    font-family: var(--subtitle-font);
+}
+
+
+/* footer legal */
+
+.footer__content .footer__legal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__legal *:not(img) {
+    margin: 12px 0;
+}
+
+.footer__legal a:nth-child(4) {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.footer__legal a:nth-child(4) img {
+    margin-right: 5px;
+}
+
+
+/* responsive */
+
+@media only screen and (max-width: 961px) {
+    .footer .footer__content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 643px) {
+    .footer .footer__content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr 1fr;
+    }
+    .footer .footer__logos {
+        flex-direction: row;
+        gap: 20px;
+        order: 4;
+        justify-content: center;
+    }
+    .footer .footer__social {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        order: 3;
+    }
+    .footer .footer__about {
+        order: 1;
+    }
+    .footer .footer__legal {
+        order: 2;
+    }
+}

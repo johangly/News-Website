@@ -1,0 +1,113 @@
+.hidden {
+    display: none !important;
+}
+
+.container .navbar {
+    display: flex;
+    width: 100%;
+    background: var(--white);
+    height: 85px;
+    justify-content: space-between;
+    padding: 0 42px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+}
+
+.navbar .hamburguer {
+    display: none;
+}
+
+.navbar .responsive__navbar {
+    display: none;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 60px;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: var(--subtitle-font);
+    transition: 100ms all ease-in;
+}
+
+.navbar a:hover {
+    color: var(--color-1);
+}
+
+.navbar .navbar__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+a .navbar__links img {
+    margin-right: 7px;
+}
+
+
+/* Responsive */
+
+@media only screen and (max-width: 772px) {
+    .navbar .links {
+        display: none;
+    }
+    .navbar img {
+        width: 100px;
+    }
+    .navbar {
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 99;
+        padding: 0px 15px !important;
+    }
+    .navbar .hamburguer {
+        display: block;
+        width: 35px;
+    }
+    .responsive__navbar {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: flex-start;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        background: var(--white);
+        margin-top: 85px;
+        transition: 300ms all ease;
+    }
+    .responsive__navbar ul {
+        display: flex;
+        width: 100%;
+        /* height: 100%; */
+        flex-direction: column;
+    }
+    .responsive__navbar ul a li img {
+        width: 28px;
+    }
+    .responsive__navbar ul a li {
+        list-style: none;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transition: 200ms all ease;
+    }
+    .responsive__navbar ul a li:hover {
+        background: var(--color-1);
+    }
+    .responsive__navbar a {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}

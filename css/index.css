@@ -1,0 +1,28 @@
+@import url('reset.css');
+@import url('nav.css');
+@import url('header.css');
+@import url('footer.css');
+
+/* Modules  */
+
+:root {
+    /* VARIABLES */
+    --title-font: 'Bebas Neue', cursive;
+    --text-font: 'Fira Sans', sans-serif;
+    --subtitle-font: 'Alata', sans-serif;
+    --white: #fbfbfb;
+    --color-1: #E63946;
+    /*! Imperial Red*/
+    --color-2: #F1FAEE;
+    /*!  Honeydew*/
+    --color-3: #A8DADC;
+    /*!  Powder Blue*/
+    --color-4: #457B9D;
+    /*! Celadon Blue*/
+    --color-5: #1D3557;
+    /*!  Prussian Blue*/
+    --color-black: #333;
+    /* !soft black*/
+    --color-white: #fbfbfb;
+    /*! soft white*/
+}
