@@ -2,13 +2,21 @@
     display: none !important;
 }
 
+.overflow-hidden {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
 .container .navbar {
     display: flex;
     width: 100%;
+    top: 0;
+    position: sticky;
     background: var(--white);
     height: 85px;
     justify-content: space-between;
     padding: 0 42px;
+    z-index: 20;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
 }
 
@@ -18,13 +26,16 @@
 
 .navbar .responsive__navbar {
     display: none;
+    z-index: 100;
 }
 
 .navbar ul {
     display: flex;
+    align-items: center;
 }
 
-.navbar a {
+.navbar a,
+.navbar button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,6 +46,18 @@
     letter-spacing: 1px;
     font-family: var(--subtitle-font);
     transition: 100ms all ease-in;
+}
+
+.navbar button {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    background: var(--color-1);
+    color: #fff;
+}
+
+.navbar button li img {
+    margin-right: 7px;
 }
 
 .navbar a:hover {
@@ -65,7 +88,7 @@ a .navbar__links img {
     .navbar {
         justify-content: center;
         align-items: center;
-        position: relative;
+        position: sticky;
         z-index: 99;
         padding: 0px 15px !important;
     }
@@ -75,26 +98,29 @@ a .navbar__links img {
     }
     .responsive__navbar {
         display: flex;
-        position: absolute;
+        position: fixed;
         justify-content: center;
         align-items: flex-start;
         top: 0;
         height: 100vh;
         width: 100%;
         background: var(--white);
-        margin-top: 85px;
+        margin-top: 80px;
+        z-index: 100;
         transition: 300ms all ease;
     }
     .responsive__navbar ul {
         display: flex;
         width: 100%;
-        /* height: 100%; */
         flex-direction: column;
+        align-items: center;
     }
-    .responsive__navbar ul a li img {
+    .responsive__navbar ul a li img,
+    .responsive__navbar ul button li img {
         width: 28px;
     }
-    .responsive__navbar ul a li {
+    .responsive__navbar ul a li,
+    .responsive__navbar ul button li {
         list-style: none;
         height: 90px;
         display: flex;
@@ -103,10 +129,29 @@ a .navbar__links img {
         width: 100%;
         transition: 200ms all ease;
     }
-    .responsive__navbar ul a li:hover {
+    .responsive__navbar ul a li:hover,
+    .responsive__navbar ul button li:hover {
         background: var(--color-1);
     }
     .responsive__navbar a {
+        width: 100%;
+    }
+    .responsive__navbar button {
+        padding: 12px 20px;
+        border-radius: 5px;
+        border: none;
+        background: var(--color-1);
+        color: #fff;
+        margin-top: 20px;
+    }
+    .responsive__navbar #createAPostLink li {
+        height: auto;
+    }
+    .responsive__navbar #createAPostLink li img {
+        margin-right: 7px;
+    }
+    .responsive__navbar a,
+    .responsive__navbar button {
         text-align: center;
         font-size: 1.5rem;
     }

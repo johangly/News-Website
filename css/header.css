@@ -41,7 +41,7 @@ header h2 .place {
     color: var(--white);
     font-family: var(--title-font);
     position: relative;
-    z-index: 999;
+    z-index: 0;
 }
 
 header h2 .place:hover::before {
@@ -62,7 +62,7 @@ header h2 .place:hover::before {
     z-index: -1;
     position: absolute;
     text-align: center;
-    right: -11%;
+    right: -13.5%;
     bottom: -17px;
 }
 
@@ -80,7 +80,7 @@ header h2 .place:hover::before {
 
 .header p {
     line-height: 25px;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 1rem;
 }
 
