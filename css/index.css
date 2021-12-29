@@ -1,9 +1,26 @@
+/* Modules  */
+
 @import url('reset.css');
 @import url('nav.css');
 @import url('header.css');
 @import url('footer.css');
+@import url('news.css');
+@import url('createAPost.css');
+@import url('comments.css');
+body::-webkit-scrollbar {
+    background: var(--white);
+    width: 7px;
+}
 
-/* Modules  */
+body::-webkit-scrollbar-thumb {
+    background: #E63946;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #E63946;
+    border-radius: 5px;
+}
 
 :root {
     /* VARIABLES */

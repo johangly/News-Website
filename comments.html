@@ -41,7 +41,7 @@
             <a href="comments.html">
                 <li class="navbar__links"><img src="images/Comments-icon.svg" alt="comments-icon">Comments</li>
             </a>
-            <button id="createAPostLink">
+            <button disabled id="createAPostLink">
                     <li class="navbar__links"><img src="images/createAPost-footer.svg" alt="Create-a-Post">Create A Post</li>
             </button>
         </ul>
@@ -57,9 +57,12 @@
                 <a href="comments.html">
                     <li class="navbar__links"><img src="images/Comments-icon.svg" alt="comments-icon">Comments</li>
                 </a>
-                <button id="createAPostLink">
+                <button style="background-color: rgb(189, 189, 189);" disabled id="createAPostLink">
                     <li class="navbar__links"><img src="images/createAPost-footer.svg" alt="Create-a-Post">Create A Post</li>
                 </button>
+                <!-- <a id="createAPostLink" href="">
+                    <li class="navbar__links"><img src="images/CreateAPost-icon.svg" alt="Create-a-Post">Create A Post</li>
+                </a> -->
             </ul>
             <img class="hamburguer" src="images/hamburguer-icon.svg" alt="">
 
@@ -73,89 +76,67 @@
                 <p>Free informative website for most curious people<br> we want be inform about what happen day to<br> day in our the world</p>
             </div>
         </header>
-        <!-- News  -->
+        <!-- news -->
+
         <main id="news" class="news">
             <article class="news__item">
                 <div class="item__img">
                     <img class="news__img" src="" alt="news-image">
-                    <img class="close" onclick="this.parentElement.parentElement.style.display = 'none';" src="images/close.svg" alt="close">
                 </div>
                 <div class="item__text">
-                    <h2 id="comment" class="news__titles"></h2>
-                    <p class="news__text"></p>
-                </div>
-            </article>
-            <article class="news__item">
-                <div class="item__img">
-                    <img class="news__img" src="" alt="news-image">
-                    <img class="close" onclick="this.parentElement.parentElement.style.display = 'none';" src="images/close.svg" alt="close">
-                </div>
-                <div class="item__text">
-                    <h2 id="comment" class="news__titles"></h2>
-                    <p class="news__text"></p>
-                </div>
-            </article>
-            <article class="news__item">
-                <div class="item__img">
-                    <img class="news__img" src="" alt="news-image">
-                    <img class="close" onclick="this.parentElement.parentElement.style.display = 'none';" src="images/close.svg" alt="close">
-                </div>
-                <div class="item__text">
-                    <h2 id="comment" class="news__titles"></h2>
-                    <p class="news__text"></p>
-                </div>
-            </article>
-            <article class="news__item">
-                <div class="item__img">
-                    <img class="news__img" src="" alt="news-image">
-                    <img class="close" onclick="this.parentElement.parentElement.style.display = 'none';" src="images/close.svg" alt="close">
-                </div>
-                <div class="item__text">
-                    <h2 id="comment" class="news__titles"></h2>
-                    <p class="news__text"></p>
-                </div>
-            </article>
-            <article class="news__item">
-                <div class="item__img">
-                    <img class="news__img" src="" alt="news-image">
-                    <img class="close" onclick="this.parentElement.parentElement.style.display = 'none';" src="images/close.svg" alt="close">
-                </div>
-                <div class="item__text">
-                    <h2 id="comment" class="news__titles"></h2>
-                    <p class="news__text"></p>
-                </div>
-            </article>
-            <article class="news__item">
-                <div class="item__img">
-                    <img class="news__img" src="" alt="news-image">
-                    <img class="close" onclick="this.parentElement.parentElement.style.display = 'none';" src="images/close.svg" alt="close">
-                </div>
-                <div class="item__text">
-                    <h2 id="comment" class="news__titles"></h2>
-                    <p class="news__text"></p>
-                </div>
-            </article>
-            <article class="news__item">
-                <div class="item__img">
-                    <img class="news__img" src="" alt="news-image">
-                    <img class="close" onclick="this.parentElement.parentElement.style.display = 'none';" src="images/close.svg" alt="close">
-                </div>
-                <div class="item__text">
-                    <h2 id="comment" class="news__titles"></h2>
-                    <p class="news__text"></p>
-                </div>
-            </article>
-            <article class="news__item">
-                <div class="item__img">
-                    <img class="news__img" src="" alt="news-image">
-                    <img class="close" onclick="this.parentElement.parentElement.style.display = 'none';" src="images/close.svg" alt="close">
-                </div>
-                <div class="item__text">
-                    <h2 id="comment" class="news__titles"></h2>
+                    <h2 class="news__titles"></h2>
                     <p class="news__text"></p>
                 </div>
             </article>
         </main>
+        <!-- comments  -->
+        <section id="comments" class="comments">
+            <div class="comments__item">
+                <div class="item__img">
+                    <img id="comment__img" src="" alt="profile-img">
+                </div>
+                <div class="item__text">
+                    <h4 id="comment__title"></h4>
+                    <p id="comment__text"></p>
+                </div>
+            </div>
+            <div class="comments__item">
+                <div class="item__img">
+                    <img id="comment__img" src="" alt="profile-img">
+                </div>
+                <div class="item__text">
+                    <h4 id="comment__title"></h4>
+                    <p id="comment__text"></p>
+                </div>
+            </div>
+            <div class="comments__item">
+                <div class="item__img">
+                    <img id="comment__img" src="" alt="profile-img">
+                </div>
+                <div class="item__text">
+                    <h4 id="comment__title"></h4>
+                    <p id="comment__text"></p>
+                </div>
+            </div>
+            <div class="comments__item">
+                <div class="item__img">
+                    <img id="comment__img" src="" alt="profile-img">
+                </div>
+                <div class="item__text">
+                    <h4 id="comment__title"></h4>
+                    <p id="comment__text"></p>
+                </div>
+            </div>
+            <div class="comments__item">
+                <div class="item__img">
+                    <img id="comment__img" src="" alt="profile-img">
+                </div>
+                <div class="item__text">
+                    <h4 id="comment__title"></h4>
+                    <p id="comment__text"></p>
+                </div>
+            </div>
+        </section>
         <!-- footer  -->
         <footer class="footer">
             <div class="footer__content">
