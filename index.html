@@ -1,81 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Bebas+Neue&family=Fira+Sans:wght@100;200;300;400;500&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/normalize.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Bebas+Neue&family=Fira+Sans:wght@100;200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
     <title>World News</title>
-</head>
+  </head>
 
-<body id="body">
+  <body id="body">
     <!-- Create A Post -->
     <div id="CreatePost" class="create__post hidden">
-        <form action="submit" id="form">
-            <div class="create__title">
-                <img src="images/createAPostBig.svg" alt="Create-a-Post">
-                <h3>CREATE YOUR POST</h3>
-            </div>
-            <label for="title">Title:</label>
-            <input placeholder="Title Example" required type="text" maxlength="100" name="title" id="title">
-            <label for="imageUrl">Image url:</label>
-            <input placeholder="https://example" required type="url" name="image" id="imageUrl">
-            <label for="description">Description:</label>
-            <textarea placeholder="News Description" required name="post" id="description" rows="10" maxlength="285" cols="50"></textarea>
-            <input id="send" type="submit" value="Create" name="textarea">
-            <img id="close__btn" class="close__btn" src="images/close-btn.svg" alt="close-btn">
-        </form>
+      <form action="submit" id="form">
+        <div class="create__title">
+          <img src="images/createAPostBig.svg" alt="Create-a-Post" />
+          <h3>CREATE YOUR POST</h3>
+        </div>
+        <label for="title">Title:</label>
+        <input
+          placeholder="Title Example"
+          required
+          type="text"
+          maxlength="100"
+          name="title"
+          id="title"
+        />
+        <label for="imageUrl">Image url:</label>
+        <input
+          placeholder="https://example"
+          required
+          type="url"
+          name="image"
+          id="imageUrl"
+        />
+        <label for="description">Description:</label>
+        <textarea
+          placeholder="News Description"
+          required
+          name="post"
+          id="description"
+          rows="10"
+          maxlength="285"
+          cols="50"
+        ></textarea>
+        <input id="send" type="submit" value="Create" name="textarea" />
+        <img
+          id="close__btn"
+          class="close__btn"
+          src="images/close-btn.svg"
+          alt="close-btn"
+        />
+      </form>
     </div>
     <!-- navbar-responsive -->
     <div class="responsive__navbar hidden">
-        <ul>
-            <a href="index.html">
-                <li class="navbar__links"><img src="images/home-icon.svg" alt="home-icon">Home</li>
-            </a>
-            <a href="comments.html">
-                <li class="navbar__links"><img src="images/Comments-icon.svg" alt="comments-icon">Comments</li>
-            </a>
-            <button id="createAPostLink">
-                    <li class="navbar__links"><img src="images/createAPost-footer.svg" alt="Create-a-Post">Create A Post</li>
-            </button>
-        </ul>
+      <ul>
+        <a href="index.html">
+          <li class="navbar__links">
+            <img src="images/home-icon.svg" alt="home-icon" />Home
+          </li>
+        </a>
+        <a href="comments.html">
+          <li class="navbar__links">
+            <img src="images/Comments-icon.svg" alt="comments-icon" />Comments
+          </li>
+        </a>
+        <button id="createAPostLink">
+          <li class="navbar__links">
+            <img
+              src="images/createAPost-footer.svg"
+              alt="Create-a-Post"
+            />Create A Post
+          </li>
+        </button>
+      </ul>
     </div>
     <div class="container">
-        <!-- navbar  -->
-        <nav class="navbar">
-            <img class="navbar__img" src="images/logo.svg" alt="News-Logo">
-            <ul class="links">
-                <a href="index.html">
-                    <li class="navbar__links"><img src="images/home-icon.svg" alt="home-icon">Home</li>
-                </a>
-                <a href="comments.html">
-                    <li class="navbar__links"><img src="images/Comments-icon.svg" alt="comments-icon">Comments</li>
-                </a>
-                <button id="createAPostLink">
-                    <li class="navbar__links"><img src="images/createAPost-footer.svg" alt="Create-a-Post">Create A Post</li>
-                </button>
-            </ul>
-            <img class="hamburguer" src="images/hamburguer-icon.svg" alt="">
+      <!-- navbar  -->
+      <nav class="navbar">
+        <img class="navbar__img" src="images/logo.svg" alt="News-Logo" />
+        <ul class="links">
+          <a href="index.html">
+            <li class="navbar__links">
+              <img src="images/home-icon.svg" alt="home-icon" />Home
+            </li>
+          </a>
+          <a href="comments.html">
+            <li class="navbar__links">
+              <img src="images/Comments-icon.svg" alt="comments-icon" />Comments
+            </li>
+          </a>
+          <button id="createAPostLink">
+            <li class="navbar__links">
+              <img
+                src="images/createAPost-footer.svg"
+                alt="Create-a-Post"
+              />Create A Post
+            </li>
+          </button>
+        </ul>
+        <img class="hamburguer" src="images/hamburguer-icon.svg" alt="" />
+      </nav>
+      <!-- header  -->
+      <header class="header">
+        <img src="images/Header-draw.svg" alt="Header-Draw" />
+        <div class="header__text">
+          <h2>
+            your favorite <span class="informative">informative</span>
+            <span class="place">place</span>
+          </h2>
+          <h1>Today News</h1>
+          <p>
+            Free informative website for most curious people<br />
+            we want be inform about what happen day to<br />
+            day in our the world
+          </p>
+        </div>
+      </header>
+      <!-- News  -->
+      <main id="news" class="news">
+        <div class="news__item news__item--loading">
+          <div class="new__loading--wrapper">
+            <div class="new__loading--img"></div>
+            <div class="new__loading--title"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+          </div>
+        </div>
+        <div class="news__item news__item--loading">
+          <div class="new__loading--wrapper">
+            <div class="new__loading--img"></div>
+            <div class="new__loading--title"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+          </div>
+        </div>
+        <div class="news__item news__item--loading">
+          <div class="new__loading--wrapper">
+            <div class="new__loading--img"></div>
+            <div class="new__loading--title"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+          </div>
+        </div>
+        <div class="news__item news__item--loading">
+          <div class="new__loading--wrapper">
+            <div class="new__loading--img"></div>
+            <div class="new__loading--title"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+          </div>
+        </div>
+        <div class="news__item news__item--loading">
+          <div class="new__loading--wrapper">
+            <div class="new__loading--img"></div>
+            <div class="new__loading--title"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+          </div>
+        </div>
+        <div class="news__item news__item--loading">
+          <div class="new__loading--wrapper">
+            <div class="new__loading--img"></div>
+            <div class="new__loading--title"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+          </div>
+        </div>
+        <div class="news__item news__item--loading">
+          <div class="new__loading--wrapper">
+            <div class="new__loading--img"></div>
+            <div class="new__loading--title"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+          </div>
+        </div>
+        <div class="news__item news__item--loading">
+          <div class="new__loading--wrapper">
+            <div class="new__loading--img"></div>
+            <div class="new__loading--title"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+          </div>
+        </div>
+        <div class="news__item news__item--loading">
+          <div class="new__loading--wrapper">
+            <div class="new__loading--img"></div>
+            <div class="new__loading--title"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+          </div>
+        </div>
+        <div class="news__item news__item--loading">
+          <div class="new__loading--wrapper">
+            <div class="new__loading--img"></div>
+            <div class="new__loading--title"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+            <div class="new__loading--text"></div>
+          </div>
+        </div>
 
-        </nav>
-        <!-- header  -->
-        <header class="header">
-            <img src="images/Header-draw.svg" alt="Header-Draw">
-            <div class="header__text">
-                <h2>your favorite <span class="informative">informative</span> <span class="place">place</span></h2>
-                <h1>Today News</h1>
-                <p>Free informative website for most curious people<br> we want be inform about what happen day to<br> day in our the world</p>
-            </div>
-        </header>
-        <!-- News  -->
-        <main id="news" class="news">
-            <article class="news__item">
+        <!-- <article class="news__item">
                 <div class="item__img">
                     <img class="news__img" src="" alt="news-image">
                     <img class="close" onclick="this.parentElement.parentElement.style.display = 'none';" src="images/close.svg" alt="close">
@@ -144,45 +287,45 @@
                     <h2 id="comment" class="news__titles"></h2>
                     <p class="news__text"></p>
                 </div>
-            </article>
-            <article class="news__item">
-                <div class="item__img">
-                    <img class="news__img" src="" alt="news-image">
-                    <img class="close" onclick="this.parentElement.parentElement.style.display = 'none';" src="images/close.svg" alt="close">
-                </div>
-                <div class="item__text">
-                    <h2 id="comment" class="news__titles"></h2>
-                    <p class="news__text"></p>
-                </div>
-            </article>
-        </main>
-        <!-- footer  -->
-        <footer class="footer">
-            <div class="footer__content">
-                <div class="footer__logos">
-                    <img src="images/logo-creator-footer.svg" alt="creator-logo">
-                    <img src="images/logo-footer.svg" alt="news-logo">
-                </div>
-                <div class="footer__social">
-                    <a href="https://www.linkedin.com/in/johangly-sucre-92473a1bb/"><img src="images/linkedin-icon.svg" alt="linkedin"></a>
-                    <a href="https://github.com/johangly"><img src="images/github-icon.svg" alt="Github"></a>
-                    <a href="https://www.facebook.com/JhoyWebDev/"><img src="images/facebook-icon.svg" alt="facebook"></a>
-                </div>
-                <div class="footer__about">
-                    <h4>About</h4>
-                    <a href="#">Our Story</a>
-                    <a href="#">Team</a>
-                </div>
-                <div class="footer__legal">
-                    <h4>legal</h4>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#"><img src="images/copyright-footer-icon.svg" alt="copyright">2021-2025 News,All Rights Reserved.</a>
-                </div>
-            </div>
-        </footer>
+            </article> -->
+      </main>
+      <!-- footer  -->
+      <footer class="footer">
+        <div class="footer__content">
+          <div class="footer__logos">
+            <img src="images/logo-creator-footer.svg" alt="creator-logo" />
+            <img src="images/logo-footer.svg" alt="news-logo" />
+          </div>
+          <div class="footer__social">
+            <a href="https://www.linkedin.com/in/johangly-sucre-92473a1bb/"
+              ><img src="images/linkedin-icon.svg" alt="linkedin"
+            /></a>
+            <a href="https://github.com/johangly"
+              ><img src="images/github-icon.svg" alt="Github"
+            /></a>
+            <a href="https://www.facebook.com/JhoyWebDev/"
+              ><img src="images/facebook-icon.svg" alt="facebook"
+            /></a>
+          </div>
+          <div class="footer__about">
+            <h4>About</h4>
+            <a href="#">Our Story</a>
+            <a href="#">Team</a>
+          </div>
+          <div class="footer__legal">
+            <h4>legal</h4>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#"
+              ><img
+                src="images/copyright-footer-icon.svg"
+                alt="copyright"
+              />2021-2025 News,All Rights Reserved.</a
+            >
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="js/index.js" type="module"></script>
-</body>
-
+  </body>
 </html>

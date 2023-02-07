@@ -13,44 +13,49 @@ const d = document,
     comment = d.querySelectorAll('#comment'),
     hamburguerButton = d.querySelector('.hamburguer');
 
+let dataNews = [];
 hamburguerButton.addEventListener('click', e => {
     navBar.classList.toggle('hidden');
     body.classList.toggle('overflow-hidden');
 });
-
+f03da8f0b13c4710896ad0ae9a1c2855
 //!create a news function
-
-const getNewsContain = () => {
-    for (let i = 1; i <= titles.length; i++) {
-        let contador = Math.floor(Math.random() * (99 - 1 + 1) + 1);
-        fetch('https://jsonplaceholder.typicode.com/posts/' + contador)
+fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
             .then((response) => response.json())
             .then((json) => {
-                const APITitle = json.title;
-                const APIText = json.body;
-                titles[--i].innerHTML = APITitle;
-                text[i].innerHTML = APIText;
+              dataNews.push(json)
+              console.log(dataNews)
+                // https://hacker-news.firebaseio.com/v0/item/{item-id}.json?print=pretty
             })
-    }
+// const getNewsContain = () => {
+//     for (let i = 1; i <= titles.length; i++) {
+//         let contador = Math.floor(Math.random() * (99 - 1 + 1) + 1);
+//         fetch('https://jsonplaceholder.typicode.com/posts/' + contador)
+//             .then((response) => response.json())
+//             .then((json) => {
+//                 const APITitle = json.title;
+//                 const APIText = json.body;
+//                 titles[--i].innerHTML = APITitle;
+//                 text[i].innerHTML = APIText;
+//             })
+//     }
 
-    for (let i = 1; i <= titles.length; i++) {
-        let contador = Math.floor(Math.random() * (99 - 1 + 1) + 1);
-        fetch('https://jsonplaceholder.typicode.com/photos/' + contador)
-            .then((response) => response.json())
-            .then((json) => {
-                const APIImages = json.url;
+    // for (let i = 1; i <= titles.length; i++) {
+    //     let contador = Math.floor(Math.random() * (99 - 1 + 1) + 1);
+    //     fetch('https://jsonplaceholder.typicode.com/photos/' + contador)
+    //         .then((response) => response.json())
+    //         .then((json) => {
+    //             const APIImages = json.url;
 
-                image[--i].src = APIImages;
-            })
-    }
-};
-getNewsContain();
+    //             image[--i].src = APIImages;
+    //         })
+    // }
+// };
+// getNewsContain();
 var close = d.querySelectorAll('.close');
 close.forEach(el => {
     el.addEventListener('click', e => {
-        // el.parentElement.parentElement.classList.add('hidden');
         const padre = el.parentElement.parentElement;
-        // padre.outerHTML = "";
         padre.outerHTML = "";
     });
 });
@@ -77,44 +82,43 @@ closeBtn.addEventListener('click', e => {
 
 //!create a post function
 
-sendbtn.addEventListener('click', event => {
-    event.preventDefault();
-    const newPost = {
-        title: `${postTitle.value}`,
-        body: `${description.value}`,
-        url: `${imageUrl.value}`
-    }
+// sendbtn.addEventListener('click', event => {
+//     event.preventDefault();
+//     const newPost = {
+//         title: `${postTitle.value}`,
+//         body: `${description.value}`,
+//         url: `${imageUrl.value}`
+//     }
+//     fetch('https://jsonplaceholder.typicode.com/posts', {
+//             method: 'POST',
+//             body: JSON.stringify(newPost),
+//             headers: {
+//                 'Content-type': 'application/json',
+//             }
+//         })
+//         .then(response => response.json())
+//         .then(json => {
+//             const APITitle = json.title;
+//             const APIText = json.body;
+//             const APIImages = json.url;
 
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-            method: 'POST',
-            body: JSON.stringify(newPost),
-            headers: {
-                'Content-type': 'application/json',
-            }
-        })
-        .then(response => response.json())
-        .then(json => {
-            const APITitle = json.title;
-            const APIText = json.body;
-            const APIImages = json.url;
+//             var newsHTML = `
+//                 <article class="news__item">
+//                     <div class="item__img">
+//                         <img class="news__img" src="${APIImages}" alt="news-image">
+//                         <img class="close" onclick="this.parentElement.parentElement.style.display = 'none';" src="images/close.svg" alt="close">
+//                     </div>
+//                     <div class="item__text">
+//                         <h2 id="comment" class="news__titles">${APITitle}</h2>
+//                         <p class="news__text">${APIText}</p>
+//                     </div>
+//                 </article>`;
 
-            var newsHTML = `
-                <article class="news__item">
-                    <div class="item__img">
-                        <img class="news__img" src="${APIImages}" alt="news-image">
-                        <img class="close" onclick="this.parentElement.parentElement.style.display = 'none';" src="images/close.svg" alt="close">
-                    </div>
-                    <div class="item__text">
-                        <h2 id="comment" class="news__titles">${APITitle}</h2>
-                        <p class="news__text">${APIText}</p>
-                    </div>
-                </article>`;
-
-            news.innerHTML += newsHTML;
-            createPost.classList.add('hidden');
-            body.classList.remove('overflow-hidden');
-        });
-});
+//             news.innerHTML += newsHTML;
+//             createPost.classList.add('hidden');
+//             body.classList.remove('overflow-hidden');
+//         });
+// });
 
 //! comments function
 
@@ -122,44 +126,44 @@ const commentsImg = d.querySelectorAll('#comment__img'),
     commentsTitle = d.querySelectorAll('#comment__title'),
     commentsText = d.querySelectorAll('#comment__text');
 
-const getComments = () => {
+// const getComments = () => {
 
-    for (let i = 1; i <= commentsTitle.length; i++) {
-        let contador = Math.floor(Math.random() * (99 - 1 + 1) + 1);
-        fetch('https://jsonplaceholder.typicode.com/comments/' + contador)
-            .then((response) => response.json())
-            .then((json) => {
-                const ctitle = json.name;
-                const ctext = json.body;
-                commentsTitle[--i].innerHTML = ctitle;
-                commentsText[i].innerHTML = ctext;
-            });
-    }
-    for (let i = 1; i <= commentsTitle.length; i++) {
-        let contador = Math.floor(Math.random() * (99 - 1 + 1) + 1);
+//     for (let i = 1; i <= commentsTitle.length; i++) {
+//         let contador = Math.floor(Math.random() * (99 - 1 + 1) + 1);
+//         fetch('https://jsonplaceholder.typicode.com/comments/' + contador)
+//             .then((response) => response.json())
+//             .then((json) => {
+//                 const ctitle = json.name;
+//                 const ctext = json.body;
+//                 commentsTitle[--i].innerHTML = ctitle;
+//                 commentsText[i].innerHTML = ctext;
+//             });
+//     }
+//     for (let i = 1; i <= commentsTitle.length; i++) {
+//         let contador = Math.floor(Math.random() * (99 - 1 + 1) + 1);
 
-        fetch('https://jsonplaceholder.typicode.com/photos/' + contador)
-            .then((response) => response.json())
-            .then((json) => {
-                const cimg = json.thumbnailUrl;
+//         fetch('https://jsonplaceholder.typicode.com/photos/' + contador)
+//             .then((response) => response.json())
+//             .then((json) => {
+//                 const cimg = json.thumbnailUrl;
 
-                commentsImg[--i].src = cimg;
-            });
-    }
-};
+//                 commentsImg[--i].src = cimg;
+//             });
+//     }
+// };
 
-getComments();
+// getComments();
 //redirect to comments.html
 
-comment.forEach(el => {
-    el.addEventListener('click', e => {
-        window.location.assign('comments.html');
-        var noticia = el.parentElement.parentElement.innerHTML;
-        // console.log(noticia);
-        // commentsNews.innerHTML = "";
-        // commentsNews.innerHTML = `${noticia}`;
-    });
-});
+// comment.forEach(el => {
+//     el.addEventListener('click', e => {
+//         window.location.assign('comments.html');
+//         var noticia = el.parentElement.parentElement.innerHTML;
+//         // console.log(noticia);
+//         // commentsNews.innerHTML = "";
+//         // commentsNews.innerHTML = `${noticia}`;
+//     });
+// });
 // close news btn
 close.forEach(el => {
     el.addEventListener('click', e => {

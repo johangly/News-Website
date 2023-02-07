@@ -9,9 +9,61 @@
 .container .news .news__item {
     margin: 0 auto;
     max-width: 350px;
+    width: 100%;
     min-height: 470px;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
     border-radius: 5px;
+}
+.container .news .news__item--loading{
+    position: relative;
+    overflow: hidden;
+    padding: 15px;
+    border: 1px solid #d3d3d3;
+    padding: 15px;
+    background-color: #e3e3e3;
+    overflow: hidden;
+}
+.container .news .news__item--loading::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(110deg, rgba(227, 227, 227, 0) 0%, rgba(227, 227, 227, 0) 40%, rgba(227, 227, 227, 0.5) 50%, rgba(227, 227, 227, 0) 60%, rgba(227, 227, 227, 0) 100%);
+    animation: gradient-animation_2 1.2s linear infinite;
+}
+.news__item--loading .new__loading--wrapper{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+}
+.news .news__item--loading .new__loading--wrapper .new__loading--img{
+    width: 100%;
+    height: 50%;
+    background-color: #cacaca;
+    border-radius: 10px;
+}
+.news .news__item--loading .new__loading--wrapper .new__loading--title{
+    width: 100%;
+    max-width: 200px;
+    height: 20px;
+    background-color: #cacaca;
+}
+.news .news__item--loading .new__loading--wrapper .new__loading--text{
+    width: 100%;
+    height: 15px;
+    background-color: #cacaca;
+}
+@keyframes gradient-animation_2 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 .news .news__item .item__img .news__img {
