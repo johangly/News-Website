@@ -18,7 +18,7 @@ hamburguerButton.addEventListener('click', e => {
     navBar.classList.toggle('hidden');
     body.classList.toggle('overflow-hidden');
 });
-f03da8f0b13c4710896ad0ae9a1c2855
+// f03da8f0b13c4710896ad0ae9a1c2855
 //!create a news function
 fetch('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
             .then((response) => response.json())
